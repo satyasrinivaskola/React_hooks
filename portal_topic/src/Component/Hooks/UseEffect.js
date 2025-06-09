@@ -5,6 +5,8 @@ const[name,setName]=useState(0)
 console.log("without use effect and print every render and not depending on dependency array")
 useEffect(()=> {
 console.log("use effect is called based on count value")
+document.title=`You clicked ${count} times`
+//To update tab tittle
 alert(count)
 })
 return(
