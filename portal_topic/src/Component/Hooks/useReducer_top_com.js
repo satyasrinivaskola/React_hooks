@@ -1,4 +1,5 @@
 import React,{useReducer} from 'react';
+import ComponentA from './useReducer_compA';
 const intiatlstate4=0
 const reducer1=(state,action)=>{
     switch(action){
@@ -12,17 +13,17 @@ const reducer1=(state,action)=>{
             return state;
     }
 }
-    function Counterone() {
+export const CountContext=React.createContext()
+function Top_component() {
 const[count,dispatch]=useReducer(reducer1,intiatlstate4);
      return(
+<CountContext.Provider value={{countState:count,countDispatch:dispatch}}>
+    
 
-        <div>
-            <div>count:{countstate}</div>
-            <button  onClick={()=>countDispatch('increment')}>Increment</button>
-             <button onClick={()=>countDispatch('decrement')}>Decrement</button>
-              <button onClick={()=>countDispatch('reset')}>Reset</button>
-        </div>
+           <ComponentA/>
+       
+          </CountContext.Provider>  
     )
   
 }
-export default Counterone
+export default Top_component

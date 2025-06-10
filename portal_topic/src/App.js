@@ -6,8 +6,9 @@ import Usestate_topic from './Component/Hooks/Usestate_topic'
 import Theme from './Component/Use_context_Theme'
 import Useeffect_topic from './Component/Hooks/UseEffect.js'
 import MouseContainer from './Component/Hooks/MouseContainer.js'
-import Counterone from './Component/Hooks/useReaducer_Counterone.js'
-
+import CounterTwo from './Component/Hooks/CounterTwo.js'
+import CounterThree from './Component/Hooks/Multiple_useReducer.js'
+import Top_component from './Component/Hooks/useReducer_top_com.js'
 function App() {
   return (
     <div >
@@ -24,7 +25,9 @@ function App() {
       <Theme/>
       <Useeffect_topic/>
       <MouseContainer/>
-      <Counterone/>
+      <CounterTwo/>
+      <CounterThree/>
+      <Top_component/>
      </>
    
     </div>
